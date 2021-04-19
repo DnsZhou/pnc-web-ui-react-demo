@@ -5,6 +5,5 @@ import App from './index';
 test('renders learn react link', () => {
   render(<App />);
   const linkElement = screen.getByText(/Patternfly 4/i);
-  console.log(linkElement);
   expect(linkElement).toBeDefined();
 });
