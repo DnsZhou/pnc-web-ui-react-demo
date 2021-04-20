@@ -4,11 +4,11 @@
 ## UI-Codebase
 Raw codebase with React-TypeScript and Patternfly 4
 
-## UI-Context
+## UI-Context [in progress]
 Codebase with Context + React Hooks solution
 
-## UI-MobX 
+## UI-MobX [not start yet]
 Codebase with MobX solution
 
-## UI-Redux 
+## UI-Redux [not start yet]
 Codebase with Redux Solution
