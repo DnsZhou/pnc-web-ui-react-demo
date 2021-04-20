@@ -12,6 +12,7 @@ import {
 } from '@patternfly/react-core';
 import { routes, IAppRoute, IAppRouteGroup } from 'src/app/routes';
 import logo from 'src/app/bgimages/pnc-logo.svg';
+import { PageContext } from 'src/app/context/PageContext';
 
 interface IAppLayout {
   children: React.ReactNode;
@@ -91,7 +92,6 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
     </SkipToContent>
   );
 
-
   const Header = (
     <PageHeader
       logo={<LogoImg />}
@@ -109,7 +109,9 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
       // sidebar={Sidebar}
       onPageResize={onPageResize}
       skipToContent={PageSkipToContent}>
-      {children}
+      <PageContext.Provider value={location.pathname}>
+        {children}
+      </PageContext.Provider>
     </Page>
   );
 }
